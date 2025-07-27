@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -22,5 +24,212 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Figtree", sans-serif;
+}
+
+.mcdonalds-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 1.1;
+}
+
+.mcdonalds-logo-wrapper span {
+  font-family: Urbanist, sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+.mcdonalds-logo-shadow {
+  z-index: 0;
+  color: #fc004e;
+  opacity: 1;
+  filter: blur(2.5px);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  /* user-select: none; */
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+
+.mcdonalds-logo-main {
+  position: relative;
+  z-index: 1;
+  color: #00E7F9;
+  /* letter-spacing: 0.04em; */
+  background: transparent;
+  /* padding: 0 24px; */
+  display: inline-block;
+}
+
+
+
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+main.content {
+  padding-top: var(--header-height-md);
+}
+
+.tai-hero-section {
+  height: 608px;
+  background-color: #000;
+}
+.tai-hero-section-bg {
+  /* background-image: url(/public/file.svg); */
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.tai-hero-section .hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+.tai-hero-section .hero-content .hero-title {
+  width: 100%;
+  max-width: 464px;
+  font-size: 21px;
+  font-weight: 900;
+  /* font-family: var(--var-font-family-heading-new); */
+}
+.tai-hero-section .hero-content .hero-sub-title {
+  font-size: .938rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 447px;
+  width: 100%;
+  padding-top: 50px;
+}
+.tai-hero-section .hero-content .hero-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.hero-buttons .hero-btn {
+    color: #FFFFFF;
+    background-color: #FC004E;
+    text-transform: uppercase;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Urbanist', sans-serif;
+    /* line-height: 20px; */
+    /* transition: all .3s linear; */
+}
+.hero-buttons .hero-link {
+  color: #3dffe2;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 20px;
+  font-size: .938rem;
+  font-weight: 500;
+  width: max-content;
+}
+.hero-image img {
+  max-width: 100%;
+}
+.tai-hero-section .hero-image img {
+  padding-right: 40px;
+}
+
+
+
+@media screen and (max-width: 1023px) {
+  .tai-hero-section {
+      height: 100%;
+      padding-bottom: 60px;
+  }
+  .tai-hero-section-bg {
+    padding: 0 40px;
+  }
+  .tai-hero-section .hero-content .hero-title {
+    /* font-size: 25px; */
+    padding: 5px 0 0;
+  }
+  .agn-section .agn-image img, .tai-hero-section .hero-image img {
+    width: 400px;
+  } 
+}
+
+@media screen and (max-width: 991px) {
+  /* main.content {
+    padding-top: 10px;
+  } */
+  .tai-hero-section .hero-wrapper {
+    padding: 0;
+  }
+  .tai-hero-section .hero-image img {
+    width: 100%;
+    padding-right: unset;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+      height: 78px;
+  }
+
+  .tai-hero-section {
+    height: 100%;
+  }
+  .tai-hero-section-bg {
+    padding: 0 30px;
+    background-position: top;
+    background-size: contain;
+    /* background-image: url(/public/file.svg); */
+  }
+  .tai-hero-section .hero-image {
+    min-height: 280px;
+  }
+  .tai-hero-section .hero-wrapper {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .tai-hero-section .hero-content .hero-sub-title {
+    padding-top: 20px;
+  }
+  .tai-hero-section .hero-image img {
+    width: 360px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tai-hero-section .hero-content {
+    min-height: 405px;
+    position: relative;
+    top: -46px;
+  }
+  /* .agn-section .agn-image img, .tai-hero-section .hero-image img, .agn-faq .faq-images img {
+    width: 100%;
+  }  */
+  .tai-hero-section .hero-content .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    /* align-items: flex-start; */
+  }
 }
