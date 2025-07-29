@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,18 +10,7 @@ export default function Home() {
             journey today!</span>
         </h1>
       </div>
-      <header className="fixed-header flex justify-end sm:py-[40px] px-[28px] sm:px-[unset] container ">
-        <div className="header-bottom flex justify-between w-[68%] sm:w-full">
-          <div className="header-bottom-left">
-            <Image src="/logo.svg" alt="Logo" width={173} height={74} />
-          </div>
-          <div className="header-bottom-right sm:flex gap-[40px]">
-            <Image className="sm:hidden" src="/hamburger.png" alt="Logo" width={20} height={12} />
-            <a href="" className="nav-link">About us</a>
-            <a href="" className="nav-link">Contact</a>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="content">
         <section className="tai-hero-section">
           <div className="tai-hero-section-bg overflow-x-hidden">

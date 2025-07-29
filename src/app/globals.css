@@ -34,11 +34,11 @@ body {
 }
 
 .nav-link {
-  @apply text-[#A9A9A9] text-[18px] font-semibold
+  @apply text-[#A9A9A9] text-[18px] font-semibold hidden sm:block
 }
 
 .content {
-  @apply pt-[8px] sm:pt-[122px]
+  @apply mt-[-60px] md:mt-[unset] xl:mt-[-40px]
 }
 
 .list-item {
@@ -86,15 +86,11 @@ body {
   display: inline-block;
 }
 
-
-
 .fixed-header {
-  position: fixed;
+  z-index: 3;
   width: 100%;
   margin: 0 auto;
-  left: 0;
-  right: 0;
-  z-index: 3;
+  position: relative;
 }
 
 .nunito {
@@ -156,9 +152,6 @@ ul li {
   line-height: 1.3;
 }
 
-.copyright {
-  line-height: 1;
-}
 
 .hero-title {
   font-family: var(--font-urbanist);
@@ -167,10 +160,6 @@ ul li {
 @media screen and (max-width: 1023px) {
   .tai-hero-section .hero-image img {
     padding-right: 40px;
-  }
-  .tai-hero-section {
-      height: 100%;
-      padding-bottom: 60px;
   }
   .hero-title {
     font-size: 25px;
