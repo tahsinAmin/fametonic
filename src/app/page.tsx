@@ -41,7 +41,7 @@ export default function Home() {
                 </ul>
                 <div className="flex flex-col sm:flex-col-reverse">
                   <div className="text-center sm:text-left">
-                    <p className="px-[20px] sm:px-[unset] text-[#ABABAB] mb-[10px]  text-xs">By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms</p>
+                    <p className="px-[20px] sm:px-[unset] text-[#ABABAB] mb-[10px]  text-xs">By clicking &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms</p>
                     <p className="copyright text-[#ABABAB] text-[10px] nunito mb-[32px] sm:mb-[0px]">Fametonic 2025 ©All Rights Reserved.</p>
                   </div>
                   <div className="hero-buttons flex flex-col items-center sm:items-start gap-[15px] sm:gap-[0px] sm:mb-[20px]">

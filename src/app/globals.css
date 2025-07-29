@@ -105,9 +105,7 @@ body {
 .tai-hero-section .hero-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 0 auto;
-  background-image: url(/public/hero-image-desktop.png);
 }
 
 .hero-content{
@@ -189,7 +187,7 @@ ul li {
     height: 100%;
   }
   .tai-hero-section-bg {
-    padding: 0 30px;
+    padding: 0 20px;
     background-position: top;
     background-size: contain;
   }
@@ -226,7 +224,6 @@ ul li {
 }
 @media screen and (min-width: 1024px) {
   :root {
-    /* TODO: Replace */
     --hero-content-width: 54%;
   }
   .hero-title {
