@@ -4,15 +4,15 @@ export default function Home() {
   return (
     <div>
       <div className="header-top bg-gradient-to-r from-[#FC004E] via-[#A14F87] to-[#10CBE0] h-[76px] sm:h-[42px] text-center flex items-center justify-center">
-        <h1 className="text-white">
+        <h1 className="text-white px-[30px] sm:px-[unset]">
           🚀 <span className="font-extrabold text-[#00E7F9] text-base">FRESH BEGINNINGS SALE:</span> <span className="font-bold text-sm">Extra 25% OFF, Limited Spots - start your
             journey today!</span>
         </h1>
       </div>
-      <header className="fixed-header flex justify-end sm:py-[40px] px-[28px] sm:px-[unset]">
-        <div className="header-bottom flex items-center justify-between w-[68%] sm:w-full pr-[28px] sm:pl-[28px]">
+      <header className="fixed-header flex justify-end sm:py-[40px] px-[28px] sm:px-[unset] container ">
+        <div className="header-bottom flex items-center justify-between w-[68%] sm:w-full">
           <div className="header-bottom-left">
-            <Image src="/logo.svg" alt="Logo" width={100} height={100} />
+            <Image src="/logo.svg" alt="Logo" width={173} height={74} />
           </div>
           <div className="header-bottom-right sm:flex gap-[40px]">
             <Image className="sm:hidden" src="/hamburger.png" alt="Logo" width={20} height={12} />
@@ -23,8 +23,8 @@ export default function Home() {
       </header>
       <main className="content">
         <section className="tai-hero-section">
-          <div className="tai-hero-section-bg px-[40px] md:px-[44px] overflow-x-hidden">
-            <div className="hero-wrapper">
+          <div className="tai-hero-section-bg overflow-x-hidden">
+            <div className="hero-wrapper container">
               <div className="hero-content sm:relative">
                 <h1 className="hero-title text-white text-center sm:text-left font-bold pt-[5px] sm:pt-[0px]">Want to Turn Social Media Into a Profitable Career?</h1>
                 <div className="mcdonalds-logo-wrapper text-center sm:text-left font-bold mb-[22px]">
@@ -69,7 +69,7 @@ export default function Home() {
               </div>
               <div className="hero-image">
                 <Image className="block sm:hidden" width={580} height={615} src="/hero-image.png" alt="Mobile Phone" />
-                <Image className="hidden sm:block" width={580} height={334} src="/hero-image-desktop.png" alt="Mobile Phone" />
+                <Image className="hidden sm:block sm:min-w-[418px] lg:min-w-[564px] xl:min-w-[666px] sm:ml-[-61px] lg:ml-[-99px] xl:ml-[-34px] sm:pr-[unset]" width={580} height={334} src="/hero-image-desktop.png" alt="Mobile Phone" />
               </div>
             </div>
           </div>

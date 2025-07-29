@@ -6,6 +6,7 @@
   --background: #0a0a0a;
   --foreground: #ededed;
   --header-height: 75.52px;
+  --hero-content-width: 100%;
 }
 
 @theme inline {
@@ -26,6 +27,10 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: "Figtree", sans-serif;
+}
+
+.container {
+  @apply max-w-[718px] lg:max-w-[957px] xl:max-w-[1124px]
 }
 
 .content {
@@ -69,7 +74,6 @@ body {
 .fixed-header {
   position: fixed;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -84,21 +88,15 @@ body {
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 .tai-hero-section .hero-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
   margin: 0 auto;
   background-image: url(/public/hero-image-desktop.png);
 }
 
-:root {
-  --hero-content-width: 55.764%;
-}
 .hero-content{
   flex: 0 0 var(--hero-content-width);
   max-width: var(--hero-content-width);
@@ -110,7 +108,7 @@ body {
 
 .tai-hero-section .hero-content .hero-title {
   width: 100%;
-  font-family: 'Urbanist', sans-serif;
+  font-family: var(--font-urbanist);
   margin-bottom: 4px;
 }
 .tai-hero-section .hero-content .hero-sub-title {
@@ -123,14 +121,14 @@ body {
   padding-top: 50px;
 }
 .hero-buttons .hero-btn {
-    color: #FFFFFF;
-    background-color: #FC004E;
-    text-transform: uppercase;
-    border-radius: 10px;
-    padding: 5px 20px;
-    font-size: 20px;
-    font-family: 'Figtree', sans-serif;
-    box-shadow: 2px 2px 10px #00E7F9;
+  color: #FFFFFF;
+  background-color: #FC004E;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-family: 'Figtree', sans-serif;
+  box-shadow: 2px 2px 10px #00E7F9;
 }
 .hero-buttons .hero-link {
   color: #3dffe2;
@@ -141,48 +139,21 @@ body {
   font-weight: 500;
   width: max-content;
 }
-.tai-hero-section .hero-image img {
-  padding-right: 40px;
-}
 
 ul li {
   line-height: 1.3;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .tai-hero-section .hero-image img {
-    height: auto;
-    min-width: 515px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .tai-hero-section .hero-content .hero-title, .mcdonalds-logo-wrapper span {
-    font-size: 35px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --hero-content-width: 57.764%;
-  }
-  .tai-hero-section .hero-content .hero-title, .mcdonalds-logo-wrapper span {
-    font-size: 35px;
-    line-height: 1.31;
-  }
-  .tai-hero-section .hero-image img {
-    margin-left: -99px;
-    min-width: 564px;
-  }
-}
-
 @media screen and (max-width: 1023px) {
+  .tai-hero-section .hero-image img {
+    padding-right: 40px;
+  }
   .tai-hero-section {
       height: 100%;
       padding-bottom: 60px;
   }
   .tai-hero-section .hero-content .hero-title, .mcdonalds-logo-wrapper span {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 1.31;
   }
   .mcdonalds-logo-shadow {
@@ -193,16 +164,11 @@ ul li {
 
 @media screen and (max-width: 991px) {
   .tai-hero-section .hero-image img {
-    min-width: 454px;
     padding-right: unset;
-    margin-left: -110px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  :root {
-    --hero-content-width: 100%;
-  }
   .hero-image {
     flex: 0 0 100%;
     max-width: 100%;
@@ -242,5 +208,30 @@ ul li {
   }
   .tai-hero-section .hero-content .hero-buttons {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --hero-content-width: 51.2%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    /* TODO: Replace */
+    --hero-content-width: 54%;
+  }
+  .tai-hero-section .hero-content .hero-title, .mcdonalds-logo-wrapper span {
+    font-size: 35px;
+    line-height: 1.31;
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    --hero-content-width: 45.73%;
+  }
+
+  .tai-hero-section .hero-content .hero-title, .mcdonalds-logo-wrapper span {
+    font-size: 35px;
   }
 }

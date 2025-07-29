@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+// Import Geist fonts as before
 import { Geist, Geist_Mono } from "next/font/google";
+// Import your new Google Fonts
+import { Figtree, Nunito, Urbanist } from "next/font/google";
 import "./globals.css";
 
+
+// Initialize Geist fonts as before
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -11,6 +16,29 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+// Initialize your new Google Fonts
+const figtree = Figtree({
+  variable: "--font-figtree", // Define a CSS variable name for Figtree
+  subsets: ["latin"],
+  display: "swap", // Recommended for optimal loading
+  weight: ["300", "400", "500", "600", "700", "800", "900"], // Specify weights you need
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito", // Define a CSS variable name for Nunito
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+});
+
+const urbanist = Urbanist({
+  variable: "--font-urbanist", // Define a CSS variable name for Urbanist
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} ${nunito.variable} ${urbanist.variable} antialiased`}
       >
         {children}
       </body>
